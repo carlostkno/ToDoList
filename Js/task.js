@@ -8,6 +8,10 @@ const btnAtualizarTarefa = document.querySelector('#btnAtualizarTarefa');
 const idTarefaEdicao = document.querySelector('#idTarefaEdicao');
 const inputTarefaNomeEdicao = document.querySelector('#inputTarefaNomeEdicao');
 
+window.onbeforeunload = function() {
+    return "Atualizando a página você perderá as tarefas" 
+}
+
 
 inputNovaTarefa.addEventListener('keypress', (e) => {
     if (e.keyCode == 13) {
@@ -17,7 +21,8 @@ inputNovaTarefa.addEventListener('keypress', (e) => {
         }
 
         // localStorage.tarefa = JSON.stringify(tarefa);
-
+        // const local = (JSON.parse(localStorage.tarefa))
+        // console.log(local)
 
         if (tarefa.nome == '') {
             alert('Digite uma tarefa!')
@@ -134,3 +139,4 @@ function alternarJanelaEdicao() {
     janelaEdicao.classList.toggle('abrir');
     janelaEdicaoFundo.classList.toggle('abrir');
 }
+
