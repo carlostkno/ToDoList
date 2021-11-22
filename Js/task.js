@@ -20,9 +20,6 @@ inputNovaTarefa.addEventListener('keypress', (e) => {
             id: gerarID(),
         }
 
-        // localStorage.tarefa = JSON.stringify(tarefa);
-        // const local = (JSON.parse(localStorage.tarefa))
-        // console.log(local)
 
         if (tarefa.nome == '') {
             alert('Digite uma tarefa!')
